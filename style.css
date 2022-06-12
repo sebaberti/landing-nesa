@@ -580,3 +580,12 @@ header {
     transform: scaleX(1);
   }
 }
+/* medias queries tablet */
+@media (min-width: 450px) and (max-width: 1023px) {
+  .info-card {
+    width: 300px;
+  }
+  .description-section p {
+    max-width: 300px;
+  }
+}
