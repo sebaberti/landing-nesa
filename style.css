@@ -65,7 +65,7 @@ header {
 .item {
   text-align: center;
   text-transform: uppercase;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   display: none;
 }
 
@@ -95,6 +95,7 @@ header {
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
+  max-width: 80%;
 }
 
 .title {
@@ -489,14 +490,20 @@ header {
   /* section 1 about */
   .about-section {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    padding-right: 2rem;
+    padding: 0 1.5rem 0 1.5rem;
   }
 
   .about-content {
     justify-content: center;
     align-items: center;
+    max-width: 50%;
+    margin: 0 auto;
+    padding-right: 0.5rem;
+  }
+  .about-img {
+    padding-left: 0.5rem;
   }
   /* seccion 2 */
   .card-container {
@@ -534,12 +541,13 @@ header {
   .informacion {
     align-items: center;
   }
-
+  /* footer */
   .elementos-footer {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
   }
+  /* about section */
   .about-img {
     flex-direction: column;
   }
@@ -548,5 +556,27 @@ header {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+  }
+
+  /* animaciones(efecto con hover + after, cuando pase el mouse por el elemento me dibuja una linea y desaparace */
+
+  .item {
+    position: relative;
+  }
+  .menu .item-link::after {
+    content: "";
+    height: 3px;
+    width: 100%;
+    background: var(--white);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.15s linear;
+  }
+  .menu .item-link:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
   }
 }
