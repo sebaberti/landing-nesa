@@ -36,42 +36,58 @@ li {
 }
 
 /* Menu */
-.header {
-  background: var(--pink);
-}
-.menu {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  background: var(--pink);
-  padding: 0 1rem;
-}
-
-.menu i {
-  font-size: 2rem;
-  color: var(--white);
-}
-
-.container-items {
   width: 100%;
-  order: 1;
+  background-color: var(--pink);
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
-
-.item {
-  text-align: center;
-  text-transform: uppercase;
-  padding: 0.5rem 0;
+.logo {
+  width: 100px;
+  margin: 0.2rem 0.2rem;
+}
+.navbar-container {
   display: none;
 }
-
-.item a {
+.menu {
+  display: none;
+}
+.menu-button {
+  display: none;
+}
+.navbar-hamburguesa {
+  display: block;
+}
+.fa-solid.fa-bars {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-right: 15px;
+}
+.menu-responsive {
+  display: none;
+  position: absolute;
+}
+.menu-button:checked ~ .menu-responsive {
+  background-color: var(--pink);
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 15px;
+  right: 0;
+  margin-top: 19.5px;
+  padding: 10px;
   color: var(--white);
 }
 
-.item a:visited {
+.menu-link {
   color: var(--white);
+  font-weight: var(--medium);
 }
+
 /*terminado el menu */
 
 /* Seccion 1 About */
@@ -431,24 +447,37 @@ li {
 /* medias queries */
 @media (min-width: 1024px) {
   /* menu */
-  .menu {
-    flex-wrap: nowrap;
-  }
 
-  .container-items {
+  .logo {
+    margin-left: 0.5rem;
+  }
+  .navbar-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
-    gap: 50px;
-    font-weight: var(--medium);
   }
-  .item {
+  .menu {
     display: flex;
+    justify-content: ;
+    align-items: center;
+    list-style: none;
+    gap: 15px;
+    margin-right: 15px;
+  }
+  .menu-item {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    margin: 1rem 2rem;
+    padding: 0.3rem 0;
+    text-transform: uppercase;
+    font-weight: var(--bold);
   }
 
-  .btn-container {
+  .navbar-hamburguesa {
     display: none;
   }
+
   /* section 1 about */
   .about-section {
     flex-direction: row;
@@ -522,7 +551,7 @@ li {
 
   /* animaciones(efecto con hover + after, cuando pase el mouse por el elemento me dibuja una linea y desaparace */
 
-  .item {
+  .menu-item {
     position: relative;
   }
   .menu .item-link::after {

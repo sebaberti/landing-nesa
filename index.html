@@ -17,28 +17,28 @@
   </head>
   <body>
     <header>
-      <nav>
-        <ul class="menu">
-          <!-- Logo -->
-          <li>
-            <a href="#"
-              ><img src="./img/logonesa.png" alt="nesa-logo" class="logo"
-            /></a>
-          </li>
-          <!-- Links del navbar  -->
-          <div class="container-items">
-            <li class="item item-link"><a href="#about">Sobre nosotros</a></li>
-            <li class="item item-link"><a href="#description">Description</a></li>
-            <li class="item item-link"><a href="#products">Productos</a></li>
-            <li class="item"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-          </div>
-          <!-- menu bars -->
-          <div class="btn-container">
-            <a href="#"><i class="fa-solid fa-bars"></i></a>
-          </div>
-        </ul>
+      <img class="logo" src="./img/logonesa.png" alt="imagen logo">
+      <nav class="navbar-container">
+          <ul class="menu">
+              <li class="menu-item item-link"><a href="#" class="menu-link">Inicio</a></li>
+              <li class="menu-item item-link"><a href="#description" class="menu-link">Ofertas</a></li>
+              <li class="menu-item item-link"><a href="#products" class="menu-link">Productos</a></li>
+              
+          </ul>
       </nav>
-    </header>
+      <nav class="navbar-hamburguesa">
+          <label for="menu-button">
+              <i class="fa-solid fa-bars"></i>
+          </label>
+          <input type="checkbox" class="menu-button" id="menu-button">
+          <ul class="menu-responsive">
+              <li class="menu-item"><a href="#" class="menu-link">Inicio</a></li>
+              <li class="menu-item"><a href="#description" class="menu-link">Ofertas</a></li>
+              <li class="menu-item"><a href="#products" class="menu-link">Podructos</a></li>
+              
+          </ul>
+      </nav>
+  </header>
     <main>
       <!--seccion 1 about  -->
       <section class="about-section" id="about">
