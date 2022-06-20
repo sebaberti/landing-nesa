@@ -471,11 +471,15 @@ header {
     margin: 1rem 2rem;
     padding: 0.3rem 0;
     text-transform: uppercase;
-    font-weight: var(--bold);
+    font-weight: var(--regular);
   }
 
   .navbar-hamburguesa {
     display: none;
+  }
+
+  .menu-link {
+    font-weight: var(--regular);
   }
 
   /* section 1 about */
